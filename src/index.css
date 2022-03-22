@@ -12,6 +12,9 @@
   .btn {
     @apply py-3 px-6 rounded-[2rem] font-semibold transition transform duration-[350ms] hover:-translate-y-1;
   }
+  .btn:hover {
+    box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+  }
 }
 
 @layer utilities {
@@ -25,5 +28,15 @@
 
   .btn-primary {
     @apply bg-slate-400 text-white;
+  }
+
+  .card-shadow {
+    box-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.2);
+  }
+  .text-pale {
+    @apply opacity-90;
+  }
+  .btn-secondary {
+    @apply bg-slate-100 text-black;
   }
 }

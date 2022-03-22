@@ -6,7 +6,7 @@ type Props = {
 
 const Index = ({ children }: Props) => {
   return (
-    <section className="relative px-10 py-16 rounded-2xl shadow-xl my-10 bg-white">
+    <section className="relative px-10 py-16 rounded-2xl shadow-xl card-shadow my-10 bg-white">
       {children}
     </section>
   );
