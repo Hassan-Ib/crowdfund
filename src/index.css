@@ -8,14 +8,22 @@
   }
 } */
 
+@layer components {
+  .btn {
+    @apply py-3 px-6 rounded-[2rem] font-semibold transition transform duration-[350ms] hover:-translate-y-1;
+  }
+}
+
 @layer utilities {
   .move-out {
     /* transform: translateX(-120%); */
     @apply -translate-x-[120%];
   }
-
   .move-in {
-    /* transform: translateX(0); */
-    @apply translate-x-0 left-0 opacity-100;
+    @apply visible left-0;
+  }
+
+  .btn-primary {
+    @apply bg-slate-400 text-white;
   }
 }

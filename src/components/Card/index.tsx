@@ -1,9 +1,15 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  children: React.ReactNode;
+};
 
-const Index = (props: Props) => {
-  return <div>Index</div>;
+const Index = ({ children }: Props) => {
+  return (
+    <section className="relative px-10 py-16 rounded-2xl shadow-xl my-10 bg-white">
+      {children}
+    </section>
+  );
 };
 
 export default Index;
