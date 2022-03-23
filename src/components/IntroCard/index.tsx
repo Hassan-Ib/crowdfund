@@ -1,8 +1,10 @@
 import React from "react";
 import Card from "../Card";
+import { useStockModal } from "../../Provider/StockModalProvider";
 type Props = {};
 
 const Index = (props: Props) => {
+  const { openModal } = useStockModal();
   return (
     <Card>
       <div className="text-center">
@@ -20,12 +22,14 @@ const Index = (props: Props) => {
           A beautiful '&' handcrafted monitor stand to reduce neck and eye
           strain
         </p>
-        <div className="flex justify-between">
-          <button className="btn btn-primary">Back this project</button>
+        <div className="flex flex-col items-center  gap-4  sm:flex-row sm:items-stretch justify-between">
+          <button onClick={openModal} className="btn btn-primary">
+            Back this project
+          </button>
           <button
             aria-label="bookmark"
             className="btn relative bg-slate-100 pl-16">
-            <span className="absolute left-0 top-0 w-12 h-full rounded-full border border-black ">
+            <span className="absolute left-0 top-0 w-12  h-12 sm:h-full rounded-full border border-black ">
               <img
                 src="https://crowdfung.netlify.app/static/media/icon-bookmark.7777f8ecb9146d532ec6d401ce72f26e.svg"
                 alt="bookmark icon"

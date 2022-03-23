@@ -39,4 +39,10 @@
   .btn-secondary {
     @apply bg-slate-100 text-black;
   }
+  .disabled {
+    @apply opacity-20;
+  }
+  .disabled-btn {
+    @apply btn-secondary -translate-y-0;
+  }
 }

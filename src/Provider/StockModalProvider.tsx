@@ -24,6 +24,5 @@ export const StockModalProvider = ({ children }: Props) => {
 
 export const useStockModal = () => {
   const modalContextData = React.useContext(ModalContext);
-  console.log(modalContextData);
   return modalContextData;
 };

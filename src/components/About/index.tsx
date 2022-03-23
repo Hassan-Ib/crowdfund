@@ -2,7 +2,6 @@ import React from "react";
 import Card from "../Card";
 import StockList from "../StockList";
 // import useModal from "../../hooks/useModal";
-import { StockModalProvider } from "../../Provider/StockModalProvider";
 import StockModal from "../StockModal";
 
 const Index = () => {
@@ -28,10 +27,8 @@ const Index = () => {
           </p>
         </article>
       </section>
-      <StockModalProvider>
-        <StockModal />
-        <StockList />
-      </StockModalProvider>
+      <StockModal />
+      <StockList />
     </Card>
   );
 };

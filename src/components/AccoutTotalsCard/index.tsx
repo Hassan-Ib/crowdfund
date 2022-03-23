@@ -1,21 +1,29 @@
 import React from "react";
 import Card from "../Card";
+import { useStock } from "../../Provider/StockProvider";
+import { formatToCurrency } from "../../utils/convertCurrencyFormat";
+
 type Props = {};
 
 const Index = (props: Props) => {
+  const { backed, backer } = useStock();
+  console.log("from acct", formatToCurrency(backed), backer);
+  const formatedBacked = formatToCurrency(backed);
+  const formaterBacker = formatToCurrency(backer);
+
   return (
     <Card>
       <div className=" flex flex-col gap-6 divide-y-2 md:divide-y-0 md:divide-x-2 md:flex-row justify-center items-center">
         {/* backed cash */}
         <h3 id="total backed by" className="text-2xl font-bold flex flex-col">
-          $ 89,934
+          $ {formatedBacked}
           <span className=" text-sm font-normal opacity-80">
             of $100,000 backed
           </span>
         </h3>
         {/* backers num */}
         <h3 id="total backer" className="text-2xl font-bold flex flex-col px-4">
-          5,008
+          {formaterBacker}
           <span className=" text-sm font-normal opacity-80">total backers</span>
         </h3>
         {/* total days left */}

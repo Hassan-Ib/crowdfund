@@ -17,7 +17,7 @@ const Navbar = (props: Props) => {
       {/* links */}
       <Navlinks className="hidden invisible text-white text-lg md:flex gap-10 capitalize md:visible" />
       <Navlinks
-        className={`absolute -left-full top-28 w-full h-screen invisible flex flex-col justify-center items-center gap-6 bg-white capitalize font-bold transition-all duration-500 ease-in-out ${
+        className={`absolute z-20 -left-full top-28 w-full h-screen invisible flex flex-col justify-center items-center gap-6 bg-white capitalize font-bold transition-all duration-500 ease-in-out ${
           openNav ? "move-in" : ""
         } md:invisible md:hidden`}
       />
