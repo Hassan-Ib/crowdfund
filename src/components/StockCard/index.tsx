@@ -1,5 +1,7 @@
 import React from "react";
 import { Stock } from "../../utils/stockData";
+// import useStockModal from "../../hooks/useStockModal";
+import { useStockModal } from "../../Provider/StockModalProvider";
 
 const Index = ({
   name,
@@ -8,6 +10,7 @@ const Index = ({
   description,
   disabled = false,
 }: Stock) => {
+  const { openModal } = useStockModal();
   return (
     <section
       className={`${
@@ -20,13 +23,14 @@ const Index = ({
         </p>
       </div>
       <p className="text-pale">{description}</p>
-      <div className="flex flex-col gap-3 justify-end md:flex-row md:justify-between md:items-center">
-        <p className="text-xl font-semibold ">
+      <div className="flex flex-col gap-3 items-start md:flex-row md:justify-between md:items-center">
+        <p className="text-xl font-bold ">
           {amountLeft}{" "}
           <span className="text-sm text-pale font-normal">left </span>
         </p>
         <button
           disabled={disabled}
+          onClick={openModal}
           className={`btn ${
             disabled
               ? "btn-secondary hover:translate-y-0 shadow-none"

@@ -1,6 +1,6 @@
 import React, { createContext, ReactNode, useContext, useState } from "react";
 
-const StockContext = createContext<boolean | null>(null);
+const StockContext = createContext({});
 
 type Props = {
   children: ReactNode;

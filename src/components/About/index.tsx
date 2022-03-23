@@ -1,9 +1,11 @@
 import React from "react";
 import Card from "../Card";
 import StockList from "../StockList";
-type Props = {};
+// import useModal from "../../hooks/useModal";
+import { StockModalProvider } from "../../Provider/StockModalProvider";
+import StockModal from "../StockModal";
 
-const Index = (props: Props) => {
+const Index = () => {
   return (
     <Card>
       <section aria-labelledby="about">
@@ -26,7 +28,10 @@ const Index = (props: Props) => {
           </p>
         </article>
       </section>
-      <StockList />
+      <StockModalProvider>
+        <StockModal />
+        <StockList />
+      </StockModalProvider>
     </Card>
   );
 };

@@ -1,17 +1,18 @@
 import React from "react";
+import StockModalCard from "./StockModalCard";
 import { stockData } from "../../utils/stockData";
-import StockCard from "../StockCard";
+type Props = {};
 
-const Index = () => {
+const StockList = (props: Props) => {
   return (
     <ul>
       {stockData.map((stock, index) => (
         <li key={index}>
-          <StockCard {...stock} />
+          <StockModalCard {...stock} />
         </li>
       ))}
     </ul>
   );
 };
 
-export default Index;
+export default StockList;
