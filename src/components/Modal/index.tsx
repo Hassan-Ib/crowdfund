@@ -11,9 +11,11 @@ const Modal = ({ children, isOpen }: Props) => {
     <div
       aria-hidden={!isOpen}
       role="dialog"
-      className="fixed z-10 top-0 left-0 w-full overflow-auto pt-44 h-screen bg-black bg-opacity-50 flex items-center justify-center px-2 sm:px-4"
+      className="fixed z-10 top-0 left-0 w-full h-screen bg-black bg-opacity-50"
       aria-modal="true">
-      {children}
+      <div className="px-2 sm:px-4 w-full py-8 h-full overflow-y-scroll">
+        {children}
+      </div>
     </div>,
     document.body
   );

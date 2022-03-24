@@ -27,14 +27,22 @@ const StockModalCard = ({
   //   console.log(disabled);
   return (
     <section
+      //   onFocus={openTab}
       className={`${
         disabled ? "disabled" : ""
       } border border-slate-400 rounded-xl my-6 flex flex-col gap-4 divide-y-2`}>
       <label
-        onFocus={openTab}
-        className="p-4 sm:p-6 w-full cursor-pointer grid gap-4 place-content-center md:grid-cols-2 ">
+        className={`p-4 sm:p-6 w-full ${
+          !disabled ? "cursor-pointer" : ""
+        }  grid gap-4 place-content-center md:grid-cols-2 `}>
         <div className="flex items-center text-xl font-bold capitalize tracking-wide gap-3 sm:gap-6 ">
-          <input type="radio" name="pledge" id={name} />
+          <input
+            type="radio"
+            disabled={disabled}
+            name="pledge"
+            onChange={openTab}
+            id={name}
+          />
           <p className="card-header">{name}</p>
         </div>
 

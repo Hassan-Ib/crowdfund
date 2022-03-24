@@ -40,7 +40,7 @@
     @apply bg-slate-200 text-black focus:bg-[#7a7a7a] focus:text-white;
   }
   .disabled {
-    @apply opacity-20;
+    @apply opacity-40;
   }
   .disabled-btn {
     @apply btn-secondary -translate-y-0;
