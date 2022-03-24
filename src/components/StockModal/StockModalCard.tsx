@@ -28,19 +28,19 @@ const StockModalCard = ({
 
   return (
     <section
-      className={`border border-slate-400 rounded-lg my-6 flex flex-col gap-4 divide-y-2`}>
+      className={`border border-slate-400 rounded-xl my-6 flex flex-col gap-4 divide-y-2`}>
       <label
         onFocus={openTab}
-        className="p-6 w-full cursor-pointer grid gap-4 place-content-center md:grid-cols-2 ">
-        <div className="flex items-center text-xl font-bold capitalize tracking-wide gap-6 ">
+        className="p-4 sm:p-6 w-full cursor-pointer grid gap-4 place-content-center md:grid-cols-2 ">
+        <div className="flex items-center text-xl font-bold capitalize tracking-wide gap-3 sm:gap-6 ">
           <input type="radio" name="pledge" id={name} />
-          <p>{name}</p>
+          <p className="card-header">{name}</p>
         </div>
 
-        <p className="px-9 md:flex-1 md:row-start-2 md:col-span-2">
+        <p className="stock-card-body px-5 sm:px-9 md:flex-1 md:row-start-2 md:col-span-2">
           {description}
         </p>
-        <p className="px-9 text-xl font-bold  md:text-right">
+        <p className="px-5 sm:px-9 text-xl font-bold  md:text-right">
           {amountLeft} <span className="text-sm font-normal">left</span>
         </p>
       </label>

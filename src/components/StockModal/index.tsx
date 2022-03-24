@@ -8,8 +8,8 @@ const Index = () => {
     <Modal isOpen={isOpen}>
       <section className="relative w-full max-w-3xl bg-white px-6 sm:px-8 md:px-12 py-12 rounded-xl">
         <article className="mb-6">
-          <h3 className="text-xl font-bold mb-6">Back this project</h3>
-          <p className="text-pale text-lg">
+          <h3 className="card-header mb-4">Back this project</h3>
+          <p className="text-pale text-base sm:text-lg">
             Want to support us in bringing Mastercraft Bamboo Monitor Riser out
             in the world?
           </p>

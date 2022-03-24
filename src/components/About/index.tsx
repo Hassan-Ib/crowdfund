@@ -8,12 +8,12 @@ const Index = () => {
   return (
     <Card>
       <section aria-labelledby="about">
-        <article>
-          <h4 id="about" className="text-lg font-semibold mb-6">
+        <article className=" text-xs sm:text-sm md:text-base">
+          <h4 id="about" className="card-header mb-6">
             About Section
           </h4>
 
-          <p className="text-pale mb-3">
+          <p className=" text-pale mb-3">
             The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
             platform that elevates your screen to a more comfortable viewing
             height. Placing your monitor at eye level has the potential to
