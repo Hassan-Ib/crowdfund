@@ -24,11 +24,12 @@ const StockModalCard = ({
     setPledge(Number(e.target.value));
   };
 
-  //   console.log(pledge, backed, backer);
-
+  //   console.log(disabled);
   return (
     <section
-      className={`border border-slate-400 rounded-xl my-6 flex flex-col gap-4 divide-y-2`}>
+      className={`${
+        disabled ? "disabled" : ""
+      } border border-slate-400 rounded-xl my-6 flex flex-col gap-4 divide-y-2`}>
       <label
         onFocus={openTab}
         className="p-4 sm:p-6 w-full cursor-pointer grid gap-4 place-content-center md:grid-cols-2 ">
@@ -45,25 +46,27 @@ const StockModalCard = ({
         </p>
       </label>
       {/* other half */}
-      {open ? (
+      {open && !disabled ? (
         <div className="py-6 flex flex-col gap-4 px-6  md:flex-row md:justify-between md:items-center">
           <input
             type="number"
             min={minimum}
             placeholder="Enter your pledge"
             onChange={textInputHandler}
-            className=" border-slate-400 text-center outline-none py-2 text-sm focus:border-b "
+            className={`border-slate-400 text-center outline-none py-2 text-sm focus:border-b`}
           />
           <div className="flex justify-center gap-10">
             <button
-              className="btn btn-secondary"
+              disabled={disabled}
+              className={`btn btn-secondary ${disabled ? "disabled-btn" : ""}`}
               onClick={() => {
                 updatePledge(minimum);
               }}>
               $ {minimum}
             </button>
             <button
-              className="btn btn-primary"
+              disabled={disabled}
+              className={`btn btn-primary ${disabled ? "disabled-btn" : ""}`}
               onClick={() => {
                 updatePledge(pledge);
               }}>
