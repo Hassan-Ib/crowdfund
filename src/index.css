@@ -2,48 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-  body {
-    @apply bg-[#056];
-  }
-} */
-
 @layer components {
   .btn {
-    @apply relative py-3 px-6 rounded-[2rem] font-semibold transition transform duration-[350ms] hover:-translate-y-1 text-sm sm:text-base;
+    @apply relative px-4 py-2 sm:py-3 sm:px-6 rounded-[2rem] font-semibold transition transform duration-[350ms] hover:-translate-y-1 text-xs sm:text-sm tracking-wide active:translate-y-0 active:shadow-none active:duration-75;
   }
   .btn:hover {
     box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
-  }
-}
-
-@layer utilities {
-  .move-out {
-    /* transform: translateX(-120%); */
-    @apply -translate-x-[120%];
-  }
-  .move-in {
-    @apply visible left-0;
   }
 
   .btn-primary {
     @apply bg-slate-400 text-white;
   }
-
-  .card-shadow {
-    box-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.2);
-  }
-  .text-pale {
-    @apply text-[#7a7a7a];
-  }
   .btn-secondary {
     @apply bg-slate-200 text-black focus:bg-[#7a7a7a] focus:text-white;
-  }
-  .disabled {
-    @apply opacity-40;
-  }
-  .disabled-btn {
-    @apply btn-secondary -translate-y-0;
   }
   .card-header {
     @apply capitalize font-bold text-lg md:text-xl;
@@ -52,6 +23,27 @@
     @apply text-pale text-base sm:text-lg;
   }
   .stock-card-body {
-    @apply text-xs leading-7 sm:text-base text-pale;
+    @apply text-xs font-normal leading-7 sm:text-base text-pale;
+  }
+}
+
+@layer utilities {
+  .move-out {
+    @apply -translate-x-[120%];
+  }
+  .move-in {
+    @apply visible left-0;
+  }
+  .card-shadow {
+    box-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.2);
+  }
+  .text-pale {
+    @apply text-[#7a7a7a];
+  }
+  .disabled {
+    @apply opacity-40;
+  }
+  .disabled-btn {
+    @apply btn-secondary shadow-none hover:shadow-none transform-none hover:translate-x-0 hover:translate-y-0;
   }
 }

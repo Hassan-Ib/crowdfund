@@ -2,9 +2,11 @@ import React from "react";
 import Card from "../Card";
 import StockList from "../StockList";
 // import useModal from "../../hooks/useModal";
+import PledgeModalProvider from "../../Provider/PledgeModalProvider";
+import PledgeModal from "../PledgeModal";
 import StockModal from "../StockModal";
 
-const Index = () => {
+const About = () => {
   return (
     <Card>
       <section aria-labelledby="about">
@@ -27,10 +29,14 @@ const Index = () => {
           </p>
         </article>
       </section>
-      <StockModal />
+      <PledgeModalProvider>
+        <PledgeModal />
+
+        <StockModal />
+      </PledgeModalProvider>
       <StockList />
     </Card>
   );
 };
 
-export default Index;
+export default About;

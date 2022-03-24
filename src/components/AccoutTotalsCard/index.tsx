@@ -5,32 +5,19 @@ import { formatToCurrency } from "../../utils/convertCurrencyFormat";
 
 type Props = {};
 
-const Index = (props: Props) => {
+const AccountTotalsCard = (props: Props) => {
   const { backed, backer } = useStock();
-  console.log("from acct", formatToCurrency(backed), backer);
+  // console.log("from acct", formatToCurrency(backed), backer);
   const formatedBacked = formatToCurrency(backed);
-  const formaterBacker = formatToCurrency(backer);
+  const formatedBacker = formatToCurrency(backer);
 
   return (
     <Card>
-      <div className=" flex flex-col gap-6 divide-y-2 md:divide-y-0 md:divide-x-2 md:flex-row justify-center items-center">
+      <div className=" flex flex-col divide-y-2 md:divide-y-0 md:divide-x-2 md:flex-row justify-center items-center">
         {/* backed cash */}
-        <h3 id="total backed by" className="text-2xl font-bold flex flex-col">
-          $ {formatedBacked}
-          <span className=" text-sm font-normal opacity-80">
-            of $100,000 backed
-          </span>
-        </h3>
-        {/* backers num */}
-        <h3 id="total backer" className="text-2xl font-bold flex flex-col px-4">
-          {formaterBacker}
-          <span className=" text-sm font-normal opacity-80">total backers</span>
-        </h3>
-        {/* total days left */}
-        <h3 id="days left" className="text-2xl font-bold flex flex-col px-4">
-          56
-          <span className=" text-sm font-normal opacity-80">days left</span>
-        </h3>
+        <Account value={`$ ${formatedBacked}`} valueSub="of $100,000 backed" />
+        <Account value={`${formatedBacker}`} valueSub="total backers" />
+        <Account value={`56`} valueSub="days left" />
       </div>
       <div className=" rounded-lg h-3 md:h-4 bg-slate-200 mt-10">
         <div className="h-full w-[70%] bg-slate-400 rounded-lg"></div>
@@ -39,4 +26,19 @@ const Index = (props: Props) => {
   );
 };
 
-export default Index;
+export default AccountTotalsCard;
+
+type AccoutProps = {
+  value: string;
+  valueSub: string;
+};
+const Account = ({ value, valueSub }: AccoutProps) => {
+  return (
+    <h3
+      id="total backer"
+      className="card-header flex flex-col justify-center items-center p-4 sm:p-6 ">
+      {value}
+      <span className=" stock-card-body">{valueSub}</span>
+    </h3>
+  );
+};

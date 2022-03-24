@@ -1,6 +1,9 @@
 import React, { ChangeEvent, ChangeEventHandler } from "react";
 import { Stock } from "../../utils/stockData";
 import { useStock } from "../../Provider/StockProvider";
+import { usePledgeModal } from "../../Provider/PledgeModalProvider";
+import { useStockModal } from "../../Provider/StockModalProvider";
+
 type Props = Stock & {
   open: boolean;
   openTab: () => void;
@@ -17,7 +20,8 @@ const StockModalCard = ({
 }: Props) => {
   const [pledge, setPledge] = React.useState<number>(minimum);
   const { updatePledge } = useStock();
-
+  const { openModal } = usePledgeModal();
+  const { closeModal } = useStockModal();
   const textInputHandler: ChangeEventHandler = (
     e: ChangeEvent<HTMLInputElement>
   ) => {
@@ -30,7 +34,7 @@ const StockModalCard = ({
       //   onFocus={openTab}
       className={`${
         disabled ? "disabled" : ""
-      } border border-slate-400 rounded-xl my-6 flex flex-col gap-4 divide-y-2`}>
+      } relative border border-slate-400 rounded-xl my-6 flex flex-col gap-4 divide-y-2`}>
       <label
         className={`p-4 sm:p-6 w-full ${
           !disabled ? "cursor-pointer" : ""
@@ -55,7 +59,10 @@ const StockModalCard = ({
       </label>
       {/* other half */}
       {open && !disabled ? (
-        <div className="py-6 flex flex-col gap-4 px-6  md:flex-row md:justify-between md:items-center">
+        <div
+          className={`py-6 flex-col gap-4 px-6 flex md:flex-row md:justify-between md:items-center transition  duration-500 transform-all translate-y-0 " ${
+            open && !disabled ? "" : ""
+          }`}>
           <input
             type="number"
             min={minimum}
@@ -68,7 +75,9 @@ const StockModalCard = ({
               disabled={disabled}
               className={`btn btn-secondary ${disabled ? "disabled-btn" : ""}`}
               onClick={() => {
+                openModal?.();
                 updatePledge(minimum);
+                closeModal?.();
               }}>
               $ {minimum}
             </button>
@@ -76,7 +85,9 @@ const StockModalCard = ({
               disabled={disabled}
               className={`btn btn-primary ${disabled ? "disabled-btn" : ""}`}
               onClick={() => {
+                openModal?.();
                 updatePledge(pledge);
+                closeModal?.();
               }}>
               continue
             </button>

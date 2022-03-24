@@ -3,7 +3,7 @@ import { Stock } from "../../utils/stockData";
 // import useStockModal from "../../hooks/useStockModal";
 import { useStockModal } from "../../Provider/StockModalProvider";
 
-const Index = ({
+const StockCard = ({
   name,
   minimum,
   amountLeft,
@@ -31,11 +31,7 @@ const Index = ({
         <button
           disabled={disabled}
           onClick={openModal}
-          className={`btn ${
-            disabled
-              ? "btn-secondary hover:translate-y-0 shadow-none"
-              : "btn-primary"
-          }`}>
+          className={`btn ${disabled ? "disabled-btn" : "btn-primary"}`}>
           {" "}
           Select Reward{" "}
         </button>
@@ -44,4 +40,4 @@ const Index = ({
   );
 };
 
-export default Index;
+export default StockCard;

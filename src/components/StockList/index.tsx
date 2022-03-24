@@ -2,7 +2,7 @@ import React from "react";
 import { stockData } from "../../utils/stockData";
 import StockCard from "../StockCard";
 
-const Index = () => {
+const StockList = () => {
   return (
     <ul>
       {stockData.map((stock, index) => (
@@ -14,4 +14,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default StockList;

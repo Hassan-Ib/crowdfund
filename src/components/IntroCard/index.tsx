@@ -3,7 +3,7 @@ import Card from "../Card";
 import { useStockModal } from "../../Provider/StockModalProvider";
 type Props = {};
 
-const Index = (props: Props) => {
+const IntroCard = (props: Props) => {
   const { openModal } = useStockModal();
   return (
     <Card>
@@ -27,7 +27,7 @@ const Index = (props: Props) => {
             Back this project
           </button>
           <button aria-label="bookmark" className="btn btn-secondary">
-            <span className="absolute -left-4 -top-1/2 sm:left-0 sm:top-0 w-12  h-12 sm:h-full rounded-full border border-black ">
+            <span className="absolute -left-2 -top-1/2 sm:left-0 sm:top-0 w-8 h-8 sm:w-12 sm:h-full rounded-full border border-black ">
               <img
                 src="https://crowdfung.netlify.app/static/media/icon-bookmark.7777f8ecb9146d532ec6d401ce72f26e.svg"
                 alt="bookmark icon"
@@ -44,4 +44,4 @@ const Index = (props: Props) => {
   );
 };
 
-export default Index;
+export default IntroCard;

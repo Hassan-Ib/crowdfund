@@ -2,7 +2,8 @@ import React from "react";
 import { useStockModal } from "../../Provider/StockModalProvider";
 import Modal from "../Modal";
 import StockList from "./StockList";
-const Index = () => {
+
+const StockModal = () => {
   const { isOpen, closeModal } = useStockModal();
   return (
     <Modal isOpen={isOpen}>
@@ -26,4 +27,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default StockModal;

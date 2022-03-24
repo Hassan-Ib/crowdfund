@@ -4,7 +4,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Index = ({ children }: Props) => {
+const Card = ({ children }: Props) => {
   return (
     <section className="relative px-6 md:px-10 py-16 rounded-2xl shadow-xl card-shadow my-10 bg-white">
       {children}
@@ -12,4 +12,4 @@ const Index = ({ children }: Props) => {
   );
 };
 
-export default Index;
+export default Card;

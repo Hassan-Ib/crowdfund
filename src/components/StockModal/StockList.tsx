@@ -1,6 +1,7 @@
 import React from "react";
 import StockModalCard from "./StockModalCard";
 import { stockData } from "../../utils/stockData";
+
 type Props = {};
 
 const StockList = (props: Props) => {

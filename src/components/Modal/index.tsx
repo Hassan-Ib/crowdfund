@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 import ReactDOM from "react-dom";
 type Props = {
   isOpen: boolean;
-  // onClose?: React.MouseEventHandler<HTMLButtonElement>;
   children: ReactNode;
 };
 const Modal = ({ children, isOpen }: Props) => {

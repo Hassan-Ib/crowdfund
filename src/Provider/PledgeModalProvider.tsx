@@ -16,6 +16,7 @@ type Props = {
 const PledgeModalProvider = (props: Props) => {
   const { isOpen, openModal, closeModal } = useModal();
 
+  console.log("isOpen form pledge", isOpen);
   return (
     <PledgeModalContext.Provider value={{ isOpen, openModal, closeModal }}>
       {props.children}
