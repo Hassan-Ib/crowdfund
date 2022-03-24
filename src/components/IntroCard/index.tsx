@@ -15,9 +15,7 @@ const Index = (props: Props) => {
             className="w-full h-full object-cover object-center "
           />
         </div>
-        <h1
-          id="introductory card"
-          className="text-xl md:text-2xl font-bold mb-2">
+        <h1 id="introductory card" className="text-2xl font-bold mb-2">
           Mastercraft Bamboo Monitor Riser
         </h1>
         <p className="mb-8 text-pale text-sm sm:text-base">

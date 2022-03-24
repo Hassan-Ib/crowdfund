@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <Card>
       <section aria-labelledby="about">
-        <article className=" text-xs sm:text-sm md:text-base">
+        <article className=" text-xs sm:text-sm md:text-base leading-6">
           <h4 id="about" className="card-header mb-6">
             About Section
           </h4>
