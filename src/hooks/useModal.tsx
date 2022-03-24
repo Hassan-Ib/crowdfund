@@ -1,6 +1,11 @@
 import React from "react";
+export type ModalContent = {
+  isOpen: boolean;
+  openModal?: () => void;
+  closeModal?: () => void;
+};
 
-const useModal = () => {
+const useModal: () => ModalContent = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const openModal = (): void => {
