@@ -26,13 +26,23 @@ This particular project is about testing my abilities
 
 ## Technologies used
 
-- **React**, could have easily used vanilla javascript for this particular project but i was tasked to do this with reactjs and i'm glad i did because i am able to solidify some new concept i recently learnt in react, concept like react portal
-- **TypeScript**, used typescript because i want to get use to using types and interfaces
-- **Tailwind css**, for css ,in Thomas Shelby's voice, because i can because i fucking can, and serious it make writing css alot easier
-- **Netlify**, for live hosting
+- **React**
+  I could have easily used vanilla javascript for this particular project but i was tasked to do this with reactjs and i'm glad i did because i am able to solidify some new concept i recently learnt in react, concept like react portal
+- **TypeScript**
+  Used typescript because i want to get use to using types and interfaces
+- **Tailwind css**
+  In Thomas Shelby's voice "because i can because i fucking can", serious it make writing css alot easier
+- **Netlify**
+  For live hosting
 
 ## Challengies and how i went about solving it
 
+not much of a challenge
+
 ## Credits
 
+[HaybuKa](https://github.com/Haybuka)
+
 ## Conclusion
+
+shoutout to myself for giving my all
