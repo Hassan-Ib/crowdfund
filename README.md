@@ -2,7 +2,7 @@
 
 ## Table of content
 
-- About the project
+- [About the project](docs/README.md#about-the-project)
   - screen shots
   - live site
 - Technologies/Tools used
