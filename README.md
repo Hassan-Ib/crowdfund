@@ -19,6 +19,9 @@ This particular project is about testing my abilities
 
 ### screen shots
 
+![Homepape screenshot](/src/img/screenshot-1.png)
+![fullpage screenshot](/src/img/full-screenshot.png)
+
 ### live site (crowdfund-ib)[https://crowdfund-ib.netlify.app]
 
 ## Technologies used
